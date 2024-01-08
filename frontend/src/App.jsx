@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import useFetch from "./hooks/useFetch";
+
+const apiToken =
+  "a54c81d2caefe202207e5e102964571c8dea743b574931da5467c8a46afc31b95efe38ae008646413528f2e9421e85d18cf2efb91702f0699511e7b244345002424279df60d4e4f1bb5f4e3c953a7e2dbd267ff1f6dac36fba81834dffabc88ef5bfada18d4393d67e9edb7d0746b690bb20e24880fc955a381c9eb27d7c6b86";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { loading, error, data } = useFetch(
+    `http://localhost:1337/api/blogs/`,
+    apiToken
+  );
 
+  if (loading) return <p>Loading..</p>;
+  if (error) return <p>Error..</p>;
+
+  console.log(data);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p>Test</p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
