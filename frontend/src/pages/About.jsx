@@ -29,12 +29,15 @@ export default function About() {
               Personal Web Site
             </a>
           </p>
-          <a href="https://www.linkedin.com/in/kaan-ozen/">
-            <FaLinkedin size={"32px"} />
-          </a>
-          <a href="https://github.com/KaanOzen-mF">
-            <FaGithubSquare size={"32px"} />
-          </a>
+
+          <div className="icon_container">
+            <a href="https://www.linkedin.com/in/kaan-ozen/">
+              <FaLinkedin className="icon" size={"48px"} />
+            </a>
+            <a href="https://github.com/KaanOzen-mF">
+              <FaGithubSquare className="icon" size={"48px"} />
+            </a>
+          </div>
         </div>
       </p>
 
