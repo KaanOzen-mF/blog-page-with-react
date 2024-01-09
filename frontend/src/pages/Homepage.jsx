@@ -2,6 +2,7 @@ import React from "react";
 import useFetch from "../hooks/useFetch";
 import Markdown from "react-markdown";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../Components.css";
 import { Link } from "react-router-dom";
 
@@ -14,24 +15,34 @@ export default function Homepage() {
     apiToken
   );
 
-  if (loading) return <p>Loading..</p>;
-  if (error) return <p>Error..</p>;
   return (
-    <>
+    <div className="home_page">
       <Navbar />
-      {data.data.map((i) => (
-        <div key={i.id}>
-          <p>{i.attributes.blogTitle}</p>
-          <Markdown>{i.attributes.blogTexts}</Markdown>
-          <img
-            src={`http://localhost:1337${i.attributes.blogMedia.data[0].attributes.url}`}
-            alt={`image of ${i.attributes.blogTitle}`}
-            width="250px"
-          />
-          <Link to={`/blog/${i.id}`}>Read More</Link>
-          <hr />
-        </div>
-      ))}
-    </>
+      <div className="main_container">
+        {loading && <p>Loading...</p>}
+
+        {error && <p>Error: Unable to load data.</p>}
+
+        {!loading &&
+          !error &&
+          data &&
+          data.data &&
+          data.data.map((i) => (
+            <div key={i.id}>
+              <img
+                src={`http://localhost:1337${i.attributes.blogMedia.data[0].attributes.url}`}
+                alt={`image of ${i.attributes.blogTitle}`}
+                width="250px"
+              />
+              <p>{i.attributes.blogTitle}</p>
+              <Markdown>{i.attributes.blogTexts}</Markdown>
+
+              <Link to={`/blog/${i.id}`}>Read More</Link>
+              <hr />
+            </div>
+          ))}
+      </div>
+      <Footer />
+    </div>
   );
 }
