@@ -3,6 +3,7 @@
   --secondary-color: #2ecc71;
 }
 
+/*Navbar Section Start*/
 .navbar_container {
   display: flex;
   flex-direction: row;
@@ -77,3 +78,20 @@
   background-color: #e8e9ed;
 }
 /*Search Bar CSS Finish*/
+
+/*Navbar Section End*/
+
+/*Footer Section Start*/
+.footer_container {
+  width: 100%;
+  background-color: #fff8f0;
+  padding: 12px;
+}
+.footer_main_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+/*Footer Section End*/
