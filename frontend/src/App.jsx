@@ -5,6 +5,7 @@ import BlogDetail from "./pages/BlogDetail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./index.css";
+import "./Pages.css";
 
 function App() {
   return (
