@@ -95,3 +95,27 @@
   text-align: center;
 }
 /*Footer Section End*/
+
+/*Categories Section Start*/
+.categories_tag_container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e8e9ed;
+  padding: 12px 64px 6px 64px;
+}
+
+.categories_tag {
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #fff8f0;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.categories_tag:hover {
+  background-color: #ff8811;
+}
+/*Categories Section End*/
