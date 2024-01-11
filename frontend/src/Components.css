@@ -101,7 +101,7 @@
   display: flex;
   justify-content: space-around;
   background-color: #e8e9ed;
-  padding: 12px 64px 6px 64px;
+  padding: 24px 64px 6px 64px;
 }
 
 .categories_tag {
@@ -118,4 +118,11 @@
 .categories_tag:hover {
   background-color: #ff8811;
 }
+
+.categories_tag.selected {
+  background-color: #ff8811;
+  box-shadow: none;
+  color: #fff8f0;
+}
+
 /*Categories Section End*/
