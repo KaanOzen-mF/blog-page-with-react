@@ -4,7 +4,9 @@
   --background-color: #fff8f0;
   --secondary-color: #2ecc71;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
