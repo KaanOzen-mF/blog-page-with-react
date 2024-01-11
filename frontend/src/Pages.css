@@ -7,11 +7,6 @@
   min-height: 100vh;
 }
 
-.main_container {
-  display: flex;
-  flex-grow: 1;
-}
-
 /*About Page Start*/
 .about_page_main_container {
   display: flex;
@@ -21,6 +16,7 @@
   align-items: center;
   text-align: center;
   background-color: #e8e9ed;
+  margin-top: 68px;
 }
 
 .about_image {
@@ -91,6 +87,7 @@
   text-align: center;
   background-color: #e8e9ed;
   width: 100%;
+  margin-top: 64px;
 }
 
 .contact_card {
@@ -207,7 +204,8 @@
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create three columns */
-  grid-gap: 20px; /* Space between rows and columns */
+  grid-gap: 16px 42px;
+
   background-color: #e8e9ed;
   padding: 42px 64px;
 }
