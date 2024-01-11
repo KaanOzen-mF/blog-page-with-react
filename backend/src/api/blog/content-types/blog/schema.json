@@ -29,8 +29,8 @@
     "blogTexts": {
       "type": "richtext"
     },
-    "blogTitle": {
-      "type": "string"
+    "minRead": {
+      "type": "integer"
     }
   }
 }
