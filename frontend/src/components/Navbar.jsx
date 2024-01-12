@@ -1,5 +1,4 @@
-import React from "react";
-import SearchBar from "./SearchBar";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -22,8 +21,6 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-
-        <SearchBar onSearch={(text) => console.log(text)} />
       </div>
     </>
   );

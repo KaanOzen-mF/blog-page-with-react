@@ -297,11 +297,26 @@
   top: 116px;
   display: flex;
   flex-direction: column;
-  width: 20%;
 }
 
 .blog_detail_sidebar_container a {
   display: block;
   margin-bottom: 10px;
 }
+
+.heading {
+  scroll-margin-top: 67px;
+}
 /*Blog Detail Page End*/
+
+.home_page {
+  background-color: white;
+  color: black;
+  /* other light theme styles */
+}
+
+.home_page_dark {
+  background-color: #333;
+  color: white;
+  /* other dark theme styles */
+}

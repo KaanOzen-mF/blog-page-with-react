@@ -51,7 +51,11 @@ export default function BlogDetail() {
               {data.data.attributes.blogTextTest.map((item, index) => {
                 if (item.type === "heading") {
                   return (
-                    <Markdown id={`heading-${index}`} key={index}>
+                    <Markdown
+                      key={index}
+                      className="heading"
+                      id={`heading-${index}`}
+                    >
                       {item.children[0].text}
                     </Markdown>
                   );
@@ -64,15 +68,6 @@ export default function BlogDetail() {
                 }
               })}
             </div>
-          </div>
-          <div className="blog_detail_sidebar_container">
-            {data.data.attributes.blogTextTest
-              .filter((item) => item.type === "heading")
-              .map((item, index) => (
-                <a href={`#heading-${index}`} key={index}>
-                  {item.children[0].text}
-                </a>
-              ))}
           </div>
         </div>
       )}

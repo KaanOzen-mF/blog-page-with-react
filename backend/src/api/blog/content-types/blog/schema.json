@@ -31,6 +31,9 @@
     },
     "minRead": {
       "type": "integer"
+    },
+    "blogTextTest": {
+      "type": "blocks"
     }
   }
 }
