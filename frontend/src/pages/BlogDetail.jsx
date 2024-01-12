@@ -48,25 +48,26 @@ export default function BlogDetail() {
                 <TbPointFilled />
                 <p>{data.data.attributes.minRead} min read</p>
               </div>
-              {data.data.attributes.blogTextTest.map((item, index) => {
-                if (item.type === "heading") {
-                  return (
-                    <Markdown
-                      key={index}
-                      className="heading"
-                      id={`heading-${index}`}
-                    >
-                      {item.children[0].text}
-                    </Markdown>
-                  );
-                } else if (item.type === "paragraph") {
-                  return (
-                    <Markdown key={index}>{item.children[0].text}</Markdown>
-                  );
-                } else {
-                  return null;
-                }
-              })}
+              {data.data.attributes.blogTextTest &&
+                data.data.attributes.blogTextTest.map((item, index) => {
+                  if (item.type === "heading") {
+                    return (
+                      <Markdown
+                        key={index}
+                        className="heading"
+                        id={`heading-${index}`}
+                      >
+                        {item.children[0].text}
+                      </Markdown>
+                    );
+                  } else if (item.type === "paragraph") {
+                    return (
+                      <Markdown key={index}>{item.children[0].text}</Markdown>
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
             </div>
           </div>
         </div>
